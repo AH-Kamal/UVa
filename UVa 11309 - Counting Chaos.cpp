@@ -17,6 +17,7 @@ pair<int, int> next_time(int hr, int mnt)
 
     return make_pair(hr, mnt);
 }
+
 int main()
 {
     int n, hr, mnt, i, j; cin>>n;
@@ -26,7 +27,6 @@ int main()
     {
         s1 = s2 = s3 = "";
         scanf("%d:%d", &hr, &mnt);
-
 
         while(1)
         {
@@ -39,7 +39,7 @@ int main()
             s2 = to_string(mnt);
             if (s1 == "0") s1 = "";
             else if (mnt < 10) s2 = "0" + s2;
-            //if (s2[0] == '0') s2 = s2[1];
+            
             s3 = s1 + s2;
             tmp = s3;
             reverse(tmp.begin(), tmp.end());
